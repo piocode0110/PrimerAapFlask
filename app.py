@@ -8,15 +8,24 @@ def inicio():
     return render_template("inicio.html")
 
 #RUTA REGISTRO
-@app.route("/registro.html")
+@app.route("/registro")
 def registro():
     return render_template("registro.html") 
 
 #RUTA CONTACTO
-@app.route("/contacto.html")
+@app.route("/contacto")
 def contacto():
     return render_template("contacto.html")
 
+#RUTA EQUIPOS
+@app.route("/equipos")
+def equipos():
+    return render_template("equipos.html")
+
+#RUTA NUEVOS USUARIOS
+@app.route("/nusuarios")
+def usuarios():
+    return render_template("nusarios.html")
 
 if __name__ == "__main__":
     app.run(debug = True, port=4000)

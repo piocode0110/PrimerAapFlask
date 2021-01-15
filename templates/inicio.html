@@ -2,18 +2,26 @@
 
 {% block content %}
 
-<head>   <link rel="stylesheet" href="{{ url_for('static',filename='css/style.css') }}"> 
+<head>   
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/style.css') }}"> 
 
 <div class="jumbotron">
 
     <h1 class="display-4">Bienvenidos </h1>
-    <p class="lead"> Esta es una unidad de héroe simple, un componente simple estilo jumbotron para llamar la atención
-                contenido o información destacados.</p>
+    <p class="lead"> Apreciado padre o madre de familia, tenga presente que esta aplicacion servira para hacer una solicitud, en calidad de préstamo, de un equipo tecnológico. Sin embargo, 
+                     la solicitud entra para ser analizada por la Secretaría de Educación de acuerdo con algunos criterios, 
+                     entre ellos la disposición de equipos que se tenga.</p>
     <hr class="my-4">
     <p>
-        Utiliza clases de utilidad para la tipografía y el espaciado para espaciar el contenido dentro del contenedor más grande.</p>
-    <a class="btn btn-primary btn-lg" href="#" role="button">Jamava</a>
+        Las solicitudes serán validadas y analizadas por la Secretaría de Educación y las Instituciones Educativas conforme a la información oficial registrada en el Sistema Integrado de Matrícula (SIMAT),
+        para contemplar la posibilidad del préstamo de equipos (tablet o computador), de acuerdo a la disponibilidad con los que cuenta cada colegio y la pertinencia de su uso educativo conforme a las necesidades 
+        del proceso pedagógico del respectivo estudiante..</p>
+    <a class="btn btn-primary btn-lg" href="registro" role="button">Ingresar</a>
     
-</div>
+</div>  
 </head>
+
+<div align="center"><img src="static/img/productos.jpeg"></div>
+   
+
 {% endblock %}

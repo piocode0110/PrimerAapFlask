@@ -2,6 +2,7 @@
 <html lang="es">
 
 <head>
+ 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -11,8 +12,16 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 
-  <!--RUTA DEL ARCHIVO CSS, CON LAS LLAVER PYTHON SABE DONDE ESTAN LAS CARPETAS-->
-  <link rel="stylesheet" href="{{ url_for('static',filename='css/style.css') }}">
+  <!--LOGIN JAN-->
+
+  <title>sistema de login</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<!-- vinculo a bootstrap -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<!-- Temas-->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+<!-- se vincula al hoja de estilo para definir el aspecto del formulario de login-->  
+  <link rel="stylesheet" href="{{ url_for('static',filename='css/registro.css') }}">
 
   <head>
 
@@ -30,9 +39,7 @@
             <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="/">Inicio</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="{{ url_for('registro')  }}   ">Ingresar</a>
-            </li>
+            
             <li class="nav-item">
               <a class="nav-link" href="{{ url_for('contacto')  }}   ">Contacto</a>
             </li>
@@ -40,8 +47,36 @@
         </div>
       </div>
     </nav>
-
+    
    
+      <!--LOGIN-->
+      <div id="Contenedor">
+      <div class="Icon">
+                     <!--Icono de usuario-->
+                    <span class="glyphicon glyphicon-user"></span>
+                  </div>
+ <div class="ContentForm">
+        <form action="" method="post" name="FormEntrar">
+          <div class="input-group input-group-lg">
+           <span class="input-group-addon" id="sizing-addon1"><i class="glyphicon glyphicon-envelope"></i></span>
+           <input type="email" class="form-control" name="correo" placeholder="Correo" id="Correo" aria-describedby="sizing-addon1" required>
+         </div>
+         <br>
+         <div class="input-group input-group-lg">
+           <span class="input-group-addon" id="sizing-addon1"><i class="glyphicon glyphicon-lock"></i></span>
+           <input type="password" name="contra" class="form-control" placeholder="******" aria-describedby="sizing-addon1" required>
+         </div>
+         <br>
+         <button class="btn btn-lg btn-primary btn-block btn-signin" id="IngresoLog" type="submit">Entrar</button>
+         <div class="opcioncontra"><a href="">Olvidaste tu contraseña?</a></div>
+         <div class="opcioncontra"><a href="nusuarios">¿Eres Nuevo? Registrate</a></div>
+        </form>
+      </div>	
+      </div>
+
+
+ 
+ 
   </body>
 
 </html>
